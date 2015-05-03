@@ -22,6 +22,8 @@ var app = {
   onSuccessGeo: function(position){
     // aggiorna le coordinate
     $('#lblPos').html(position.coords.latitude + " - " + position.coords.longitude);
+    $('#lblMsg').hide();
+    $('#btnGps').show();
   },
   // chiamata quando c'è un errore nella lettura della posizione
   onErrorGeo: function(error) {
@@ -41,12 +43,16 @@ var app = {
             break;
     }
     alert(msg);
+    $('#lblMsg').hide();
+    $('#btnGps').show();
   },
   // verifica la posizione GPS
   checkPos: function(){
-    alert("check Pos");
+    $('#lblMsg').html('sto cercando');
+    $('#lblMsg').show();
+    $('#btnGps').hide();
     navigator.geolocation.getCurrentPosition(app.onSuccessGeo, app.onErrorGeo, { timeout: GPS_TIMEOUT });
-  },
+  }
 }
 
 app.initialize();
