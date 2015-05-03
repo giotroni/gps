@@ -12,6 +12,7 @@ var app = {
   onDeviceReady: function(){
     // ok, il dispositivo è pronto: configuralo
     // EVENTI DA LEGARE
+    alert("ok: pronto");
     $("#btnGps").on("click", app.checkPos);
   },
   // chiamata quando la posizione è stata letta
@@ -44,6 +45,7 @@ var app = {
   },
   // verifica la posizione GPS
   checkPos: function(){
+    alert("Cerca");
     $('#lblMsg').html('sto cercando');
     $('#lblMsg').show();
     $('#btnGps').hide();
