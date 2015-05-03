@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "it.troni.gps"
+        versionCode="10"
+        version   = "1.1.0">
+
+    <name>GPS</name>
+
+    <description>
+        Ndo' stai?
+    </description>
+
+    <author href="http://www.troni.it" email="giorgio@troni.it">
+        giotroni
+    </author>
+ 
+    <gap:platform name="android" />
+    
+    <icon src="img/passAPPort_icon.png" />
+
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+
+    <gap:plugin name="org.apache.cordova.geolocation" />
+
+
+</widget>
