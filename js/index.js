@@ -11,10 +11,6 @@ var app = {
   },
   onDeviceReady: function(){
     // ok, il dispositivo è pronto: configuralo
-    // app.showAlert("Chiamata alla fine del caricamento","msg");
-    destinationType=navigator.camera.DestinationType;
-    // inizializza l'elenco delle mete
-    mete.inizializza();
     // EVENTI DA LEGARE
     $("#btnGps").on("click", app.checkPos);
   },
